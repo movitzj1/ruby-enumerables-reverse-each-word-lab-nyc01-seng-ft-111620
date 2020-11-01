@@ -1,6 +1,6 @@
 def reverse_each_word(string)
   empty_string = ""
-  string.split.each do |word|
+  string.split.each do |word| #Reference #https://stackoverflow.com/questions/28649812/ruby-loops-and-classes-splitting-a-string-into-an-array-and-back-to-a-string-ag
     new_word = word.reverse
     empty_string << new_word + " "
   end
@@ -10,11 +10,6 @@ end
 
 p reverse_each_word("Hello there, and how are you?")
 
-#def reverse_each_word(string)
-  #new_word = string.split.collect{|word| word.reverse + " "}
-  #new_word.to_s
-  #return new_word
-#end
 def reverse_each_word(string)
   empty_string = ""
   string.split.collect do |word|
